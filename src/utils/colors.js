@@ -1,0 +1,9 @@
+export const Colors={
+    RED:"#D42323",
+    LIGHTPINKBACKGROUND:"#FEE2E2",
+    BLACK:"#010F07",
+    MEDIUMGRAY:"#6B6B6B",
+    WHITE:"#F6F6F6",
+    LIGHTGRAY:"#868686",
+    GRAY:"#505050"
+}

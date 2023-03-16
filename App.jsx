@@ -23,13 +23,11 @@ function App() {
 
   return (
     <ApolloProvider client={client} >
-    {/* <Login/>
+      {/* <Login/>
     <Name/> */}
-    {/* <Dashboard/> */}
-    <SafeAreaView style={{flex:1,backgroundColor:Colors.WHITE}}>
-    <AppNav/>
+      {/* <Dashboard/> */}
+      <AppNav />
 
-    </SafeAreaView>
 
     </ApolloProvider>
   );

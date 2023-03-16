@@ -5,6 +5,7 @@ export const Vectors={
     clock:require("../vectors/clock.png"),
     home:require("../vectors/home.png"),
     search:require("../vectors/search.png"),
+    back:require("../vectors/back.png"),
     fileText:require("../vectors/fileText.png"),
     useraccount:require("../vectors/useraccount.png"),
     deactiveHome:require("../vectors/deactiveHome.png"),

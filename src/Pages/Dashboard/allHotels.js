@@ -74,7 +74,7 @@ const AllHotels = () => {
                             <Image source={Vectors.clock} style={{ tintColor: Colors.WHITE }} />
                             <Text style={[commonStyles.subText, { paddingHorizontal: Matrics.hs5, color: Colors.WHITE }]}>32 min</Text>
                         </View>
-                        <View style={[commonStyles.rSpaceCent,{paddingTop:Matrics.vs7}]}>
+                        <View style={[commonStyles.rSpaceCent, { paddingTop: Matrics.vs7 }]}>
                             <View style={[commonStyles.rowCenter]}>
                                 <Image source={Vectors.bike} style={{ tintColor: Colors.WHITE }} />
                                 <Text style={[commonStyles.subText, { paddingHorizontal: Matrics.hs5, color: Colors.WHITE }]}>Free </Text>
@@ -90,7 +90,7 @@ const AllHotels = () => {
                 </View>
                 <View style={{ marginVertical: Matrics.vs10 }}>
                     <Text style={[commonStyles.med16]}>{item?.name}</Text>
-                    <Text style={[commonStyles.med14, { color: Colors.LIGHTGRAY,paddingTop:Matrics.vs5 }]}>{item?.location}</Text>
+                    <Text style={[commonStyles.med14, { color: Colors.LIGHTGRAY, paddingTop: Matrics.vs5 }]}>{item?.location}</Text>
                 </View>
             </View>
         )
@@ -98,7 +98,7 @@ const AllHotels = () => {
 
     return (
         <SafeAreaComponent>
-            <Header />
+            <Header back={true} />
             <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
                 <View style={[commonStyles.flex, commonStyles.row, { marginHorizontal: Matrics.hs15 }]}>
                     <View style={{ flex: 0.5, paddingRight: Matrics.hs7 }}>

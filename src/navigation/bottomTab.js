@@ -1,12 +1,14 @@
 import { Button, Image, Pressable, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import Dashboard from '../dashboard'
 import Login from '../login'
 import { Vectors } from '../assets/vectors'
 import { getSansUITextFont, width } from '../utils'
 import { Matrics } from '../utils/matrics'
 import { Colors } from '../utils/colors'
+import Dashboard from '../Pages/Dashboard/dashboard'
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
+import AllHotels from '../Pages/Dashboard/allHotels'
 
 const Tab = createBottomTabNavigator()
 
@@ -42,6 +44,15 @@ const bottomTab = [
 ]
 
 
+const HomeStack = ()=>{
+    const Stack = createNativeStackNavigator()
+   return <Stack.Navigator headerMode="none" initialRouteName='Dashboard' screenOptions={{ headerShown: false, cardStyle: { backgroundColor: 'transparent' } }}>
+        {/* <Stack.Screen name="MainTab" component={BottomTab}/> */}
+        <Stack.Screen name='Dashboard' component={Dashboard}/>
+        <Stack.Screen name='AllHotels' component={AllHotels}/>
+    </Stack.Navigator>
+}
+
 const MyTabBar = (props) => {
     return (
         <View style={styles.mainView}>
@@ -61,7 +72,7 @@ const MyTabBar = (props) => {
 const BottomTab = () => {
   return (
    <Tab.Navigator tabBar={props => <MyTabBar {...props} />}   screenOptions={{ headerShown: false }}>
-    <Tab.Screen name="Home" component={Dashboard}/>
+    <Tab.Screen name="Home" component={HomeStack}/>
     <Tab.Screen name="Login" component={Login}/>
     <Tab.Screen name="Logins" component={Login}/>
     <Tab.Screen name="Loginsa" component={Login}/>

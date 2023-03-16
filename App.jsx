@@ -9,7 +9,6 @@ import { ApolloProvider } from '@apollo/client';
 import React from 'react';
 import { SafeAreaView, ScrollView, StatusBar, StyleSheet, useColorScheme, View, } from 'react-native';
 import { client } from './src/apolloClient';
-import Dashboard from './src/dashboard';
 import Login from './src/login';
 import Name from './src/name';
 import AppNav from "./src/navigation"

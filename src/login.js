@@ -96,14 +96,12 @@ const onsubmit=()=>{
       password: "123456",
     }
   }).then(async ({ data }) => {
-    console.log("🚀 ~ file: login.js:99 ~ onsubmit ~ data:", data)
     if (data?.signIn?.token) {
       AsyncStorage.setItem("token", data?.signIn?.token);
     } else {
       // Toast.show("Something went wrong");
     }
   }).catch(err => {
-      console.log("🚀 ~ file: login.js:107 ~ onsubmit ~ err:", err)
       return {
   }
     

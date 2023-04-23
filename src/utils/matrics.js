@@ -128,6 +128,7 @@ export const Matrics = {
   hs215: scalling.hs(125),
   hs250: scalling.hs(250),
   hs130: scalling.hs(130),
+  hs135: scalling.hs(135),
   hs150: scalling.hs(150),
   hs180: scalling.hs(180),
   hs300: scalling.hs(300),
@@ -183,6 +184,7 @@ export const Matrics = {
   ms90: scalling.ms(90),
   ms95: scalling.ms(95),
   ms100: scalling.ms(100),
+  ms120: scalling.ms(120),
   ms450: scalling.ms(450)
 
 };

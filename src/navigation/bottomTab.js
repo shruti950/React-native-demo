@@ -47,10 +47,10 @@ const bottomTab = [
 
 const HomeStack = () => {
     const Stack = createNativeStackNavigator()
-    return <Stack.Navigator headerMode="none" initialRouteName='HotelDetails' screenOptions={{ headerShown: false, cardStyle: { backgroundColor: 'transparent' } }}>
+    return <Stack.Navigator headerMode="none" initialRouteName='Dashboard' screenOptions={{ headerShown: false, cardStyle: { backgroundColor: 'transparent' } }}>
         {/* <Stack.Screen name="MainTab" component={BottomTab}/> */}
-        <Stack.Screen name='HotelDetails' component={HotelDetails} />
         <Stack.Screen name='Dashboard' component={Dashboard} />
+        <Stack.Screen name='HotelDetails' component={HotelDetails} />
         <Stack.Screen name='AllHotels' component={AllHotels} />
     </Stack.Navigator>
 }

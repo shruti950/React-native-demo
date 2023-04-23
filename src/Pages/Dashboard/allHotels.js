@@ -1,4 +1,4 @@
-import { Image, ImageBackground, ScrollView, StyleSheet, Text, View } from 'react-native'
+import { Image, ImageBackground, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { SafeAreaComponent } from '../../components/molecules'
 import Header from './components/header'
@@ -7,8 +7,10 @@ import { Images } from '../../assets/Images'
 import { Matrics } from '../../utils/matrics'
 import { Colors } from '../../utils/colors'
 import { Vectors } from '../../assets/vectors'
+import { useNavigation } from '@react-navigation/native'
 
 const AllHotels = () => {
+    const navigation = useNavigation()
     const hotelsLeft = [
 
         {
@@ -65,7 +67,7 @@ const AllHotels = () => {
 
     const renderImageView = (item) => {
         return (
-            <View style={{ flex: 0.5, marginTop: Matrics.vs10, }}>
+            <Pressable style={{ flex: 0.5, marginTop: Matrics.vs10, }} onPress={() => navigation.navigate("HotelDetails")}>
                 <View style={{ position: "relative" }}>
 
                     <Image source={item?.image} style={{ width: "100%", borderRadius: Matrics.ms8 }} />
@@ -92,7 +94,7 @@ const AllHotels = () => {
                     <Text style={[commonStyles.med16]}>{item?.name}</Text>
                     <Text style={[commonStyles.med14, { color: Colors.LIGHTGRAY, paddingTop: Matrics.vs5 }]}>{item?.location}</Text>
                 </View>
-            </View>
+            </Pressable>
         )
     }
 

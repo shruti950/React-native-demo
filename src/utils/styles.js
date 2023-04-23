@@ -25,14 +25,15 @@ export const commonStyles = {
     medRed16: function () {
         return { ...this.med16, color: Colors.RED }
     },
-    rowCenter:{
+    rowCenter: {
         flexDirection: "row", alignItems: "center"
     },
-    medLightGray14:function () {
+    medLightGray14: function () {
         return { ...this.med14, color: Colors.LIGHTGRAY }
     },
-    rowSpaceBet:{
+    rowSpaceBet: {
         flexDirection: "row", justifyContent: "space-between"
-    }
+    },
+    headText: { fontSize: Matrics.ms20, color: Colors.BLACK, fontFamily: getSansUITextFont("Bold") },
 
 }
